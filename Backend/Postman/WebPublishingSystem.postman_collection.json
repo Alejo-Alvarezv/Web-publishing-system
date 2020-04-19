@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "526f2463-2813-462b-b7f6-a3c6c8ba1e91",
+		"name": "WebPublishingSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "savePost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Alejo\",\n\t\"text\": \"example\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/web-api/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"web-api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAllPosts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/web-api/posts/",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"web-api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
