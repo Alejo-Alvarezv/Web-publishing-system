@@ -1,9 +1,9 @@
-package com.alejo.WebPublishingSystem.RestRepository;
+package com.alejo.WebPublishingSystem.restRepository;
 
 import java.util.List;
 
-import com.alejo.WebPublishingSystem.Document.dao.Comment;
-import com.alejo.WebPublishingSystem.Document.dao.Post;
+import com.alejo.WebPublishingSystem.documentDAO.Comment;
+import com.alejo.WebPublishingSystem.documentDAO.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
@@ -50,20 +50,28 @@ public class PostRepository {
 	public List<Post> findAll(){
 		return mongoTemplate.findAll(Post.class);
 	}
-	
+
+	/**
+	 * Find a specific post
+	 * @param idPost - Identifier a post
+	 * @return Post
+	 */
 	public Post find(String idPost){
 		return mongoTemplate.find(
 				new Query().addCriteria(Criteria.where("_id").is(idPost)), Post.class).get(0);
-		
 	}
-	
+
+	/**
+	 * Search post
+	 * @param search - Post to search
+	 * @return List of post
+	 */
 	public List<Post> search(String search){
 		return mongoTemplate.aggregate(Aggregation.newAggregation(
 				Aggregation.match(new Criteria().orOperator(
-						Criteria.where("nombre").regex(search),
-						Criteria.where("texto").regex(search)					
+						Criteria.where("name").regex(search),
+						Criteria.where("text").regex(search)
 						))
 				), "Post", Post.class).getMappedResults();
 	}
-
 }

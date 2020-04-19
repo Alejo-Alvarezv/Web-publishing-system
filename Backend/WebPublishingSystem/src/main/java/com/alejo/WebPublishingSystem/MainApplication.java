@@ -6,10 +6,10 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 @SpringBootApplication
 @EnableMongoRepositories ("com.alejo.WebPublishingSystem.RestRepository")
-public class Application {
+public class MainApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(MainApplication.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.alejo.WebPublishingSystem.Document.dao;
+package com.alejo.WebPublishingSystem.documentDAO;
 
 import java.util.Date;
 
