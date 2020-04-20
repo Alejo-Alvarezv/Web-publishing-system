@@ -1,0 +1,49 @@
+<div class="jumbotron">
+  <h1 class="display-4">{{post.name}}</h1>
+  <p class="lead">{{post.text}}</p>
+  <hr class="my-4">
+  <p>{{post.description}}</p>
+  <h5>Comments:</h5>
+  <ul>
+    <li *ngFor="let c of post.comments">
+      <p>{{c.comment}}</p>
+      <p><small>Publish by <strong>{{c.name}}</strong> </small></p>
+      <p><small>{{c.date | date }}</small></p>
+    </li>
+  </ul>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Add comment
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add comment</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" [(ngModel)]="name" name="name" class="form-control" id="name" placeholder="Enter Name">
+            <small id="name" class="form-text text-muted">Put your name</small>
+          </div>
+          <div class="form-group">
+            <label for="comment">Comment</label>
+            <input type="text" [(ngModel)]="comment" name="comment" class="form-control" id="comment" placeholder="Comment">
+            <small id="comment" class="form-text text-muted">Put your comment</small>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button (click)="send()"  type="button" data-dismiss="modal" class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="jumbotron">
+  <h1 class="display-4">{{post.name}}</h1>
+  <p class="lead">{{post.text}}</p>
+  <hr class="my-4">
+  <h5>Comments:</h5>
+  <button type="button" class="btn btn-primary" [routerLink]="['/post/', post.id]">
+  See comments
+  </button>
+</div>
