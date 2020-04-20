@@ -14,9 +14,6 @@ This is a responsive fullstack development with the following technologies
   - [Bootstrap](#Bootstrap)
   - [JQuery](#JQuery)
   
-
-## Technologies and Tools
-
 * **Database** => No relational database (**MongoDB** - IDE **MongoDB compass**)
 ## MongoDB
 ![](https://github.com/Alejo-Alvarezv/Web-publishing-system/blob/master/Images/MongoDB-compass.png)
