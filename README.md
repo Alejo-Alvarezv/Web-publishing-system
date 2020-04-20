@@ -7,7 +7,7 @@ This is a responsive fullstack development with the following technologies
 
 - [Technologies and Tools](#Tools-And-Technologies)
   - [MongoDB](#MongoDB)
-  - [Spring Boot and IntelliJ](#SpringBoot)
+  - [Spring Boot and IntelliJ](#Spring-IntelliJ)
   - [Maven](#Maven)
   - [Postman](#Postman)
   - [Angular](#Angular)
